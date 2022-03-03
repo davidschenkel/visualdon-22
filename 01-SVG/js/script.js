@@ -8,7 +8,7 @@ function domOn(selector, event, callback, options) {
 
 
 
-// changer la couleur du rectangle quand on clique dessus
+// changer la couleur du rectangle et du cercle animé quand on clique dessus
 domOn('#changeColor', 'click', evt => {
 
 let maxVal = 0xFFFFFF; // 16777215
