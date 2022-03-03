@@ -14,23 +14,70 @@
 
     <h1>Dessiner des formes</h1>
     <h2>Rectangle</h2>
+    <!-- <svg width ="100" heigth="200"></svg> -->
+      <svg width ="700" height="150" >
+        <rect x="0" y="0" width="400" height="100" fill="red"></rect>
+      </svg>
+      
+    
 
     <h2>Donut</h2>
-
+    <svg width ="700" height="150">
+      <circle cx="50" cy="50" r="60" fill="none" stroke="black"></circle>
+      <circle cx="50" cy="50" r="30" fill="none" stroke="black"></circle> 
+    </svg>
 
     <h2>Ligne</h2>
-
+    <svg width ="700" height="150">
+      <line x1="80" y1="45" x2="20" y2="50" stroke="blue"></line>
+    </svg>
 
     <h2>Path</h2>
+    <svg width ="700" height="150">
+      <path d="M 5 100 V 5" fill="none" stroke="black" stroke-width="3"></path>
+      <path d="M 4 98.8 C 50 90 50 10 4 6.3" fill="none" stroke="black" stroke-width="3"></path>
+      <path d="M 50 100 L 70 0 L 90 100" fill="none" stroke="black" stroke-width="3"></path>
+      <path d="M 58 60 H 82" fill="none" stroke="black" stroke-width="3"></path>
+      <path d="M 95 0 L 115 100 L 135 0" fill="none" stroke="black" stroke-width="3"></path>
+      <path d="M 150 10 V 100" fill="none" stroke="black" stroke-width="3"></path>
+      <circle cx="150" cy="0" r="4" fill="black" stroke="black"></circle>
+    </svg>
 
 
     <h1>Animer des formes</h1>
 
     <h2>On click</h2>
 
+    <svg width ="700" height="150" >
+      <rect x="0" y="0" width="400" height="100" fill="red" id="changeColor"></rect>
+    </svg>
+
     <h2>On hover</h2>
 
+    <svg width ="700" height="150">
+      <circle cx="50" cy="50" r="60" fill="none" stroke="black" id="changeSize"></circle>
+      <circle cx="50" cy="50" r="30" fill="none" stroke="black"></circle> 
+    </svg>
+
     <h2>Prenez la première lettre de votre prénom que vous avez créée ci-dessus. Faite bouger une forme de votre choix le long de la lettre</h2>
+    <svg width ="700" height="150">
+      <!-- <path d="M 5 100 V 5" fill="none" stroke="black" stroke-width="3" id="theMotionPath"></path>
+      <path d="M 4 98.8 C 50 90 50 10 4 6.3" fill="none" stroke="black" stroke-width="3"></path> -->
+
+      <!-- <path d="M 5 100 V 5 M 4 98.8 C 50 90 50 10 4 6.3" fill="none" stroke="black" stroke-width="3" id="theMotionPath"></path> -->
+      <path d="M 5 5 V 100 M 4 98.8 C 50 90 50 10 4 6.3" fill="none" stroke="black" stroke-width="3" id="theMotionPath"></path>
+      
+
+       <!-- Cercle rouge qui sera déplacé le long du chemin. -->
+       <circle cx="" cy="" r="5" fill="red" id="color"> 
+        <!--Définit l'animation -->
+        <animateMotion dur="3s" repeatCount="indefinite">
+          <mpath xlink:href="#theMotionPath"/>
+        </animateMotion>
+      </circle>
+
+
+    </svg>
 
 
   </body>
